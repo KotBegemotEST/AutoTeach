@@ -1,0 +1,240 @@
+.statistic-container{
+    background-color: #0366878f;
+    padding: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.calendar{
+    background-image: url('../imgs/calendar.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    margin-right: 5px;
+}
+
+.barChart{
+    background-image: url('../imgs/bar-chart.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: inline-block;
+    width: 25px;
+    height: 25px;
+    margin-right: 5px;
+}
+
+.compression{
+    background-image: url('../imgs/comparison.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: inline-block;
+    width: 35px ;
+    height: 35px;
+    margin-right: 10px;  
+}
+.absence{
+    background-image: url('../imgs/absent.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: inline-block;
+    width: 35px ;
+    height: 35px;
+    margin-right: 10px;     
+}
+
+.second-statistic-summary .h2Settings{
+ flex-wrap: nowrap;
+}
+
+.attendenceTrend{
+    background-image: url('../imgs/trend.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: inline-block;
+    width: 35px ;
+    height: 35px;
+    margin-right: 10px;   
+}
+
+.gradeTrend{
+    background-image: url('../imgs/test.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: inline-block;
+    width: 35px ;
+    height: 35px;
+    margin-right: 10px;   
+}
+
+.statisticImg{
+    background-image: url('../imgs/pie-chart.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: inline-block;
+    width: 35px ;
+    height: 35px;
+    margin-right: 10px;
+}
+
+.dynamic-chart{
+    width: 50%;
+    height: 300px;
+    margin: 0 auto; 
+    padding: 20px;
+    background-color: #0366878f;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+    align-items: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding-top: 0px;
+}
+.attendance-trend-chart{
+    width: 50%;
+    margin: 0 auto; 
+    padding: 20px;
+    background-color: #0366878f;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px; 
+    margin-bottom: 20px;
+    padding-top: 0px;
+}
+
+.second-statistic-summary{
+    width: 100%;
+    align-items: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: row; 
+}
+
+
+
+
+.second-statistic-summary .h2Settings,.attendance-trend-chart .h2Settings{
+    margin-top: 0px;
+}
+
+
+.second-statistic-summary-left{
+
+    margin-left: 20px;
+}
+.second-statistic-summary-right{
+    margin-right: 20px;
+}
+
+
+.wrapper {
+    max-width: 970px;
+    margin: 0 auto; /* Центрируем */
+    padding: 20px; /* Чтобы контент не прилипал */
+  }
+  
+
+  .trend-controls {
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.trend-controls select {
+    padding: 5px;
+    font-size: 14px;
+}
+
+.statisticTrend-container {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+}
+
+.chart-wrapper {
+    display: flex;
+    width: 100%;
+}
+
+.statistic-summary{
+    display: flex;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+
+
+.summary-right{ 
+    width: 50%;
+    margin-left: 20px;
+}
+
+.summary-left{
+    width: 50%;
+}
+
+.h2Settings{
+    margin-left: 5px;
+    margin-right: 5px;
+    width: 100%;
+    text-decoration: none;
+    color: white;
+    font-weight: 600;
+    font-family: sans-serif;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+
+
+.summary-left p, .summary-right p{
+    margin-left: 5px;
+    margin-right: 5px;
+    text-decoration: none;
+    color: white;
+    font-weight: 600;
+    font-family: sans-serif;
+}
+
+.trend-controls{
+    justify-content: center;
+}
+
+.trend-controls select{
+    padding: 5px;
+    font-size: 14px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    background-color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+
+}
+
+.trend-controls label{
+    color: white;
+    font-weight: 600;
+    font-family: sans-serif;
+}
