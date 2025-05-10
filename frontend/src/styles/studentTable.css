@@ -1,0 +1,178 @@
+.tr{
+    position: relative;
+}
+
+td{
+    position: relative;
+}
+
+th {
+    margin-top: 25px;
+    padding-top: 30px;
+    padding-bottom: 5px;
+    /* padding-left: 15px;
+    padding-right: 15px; */
+    text-align: left;
+    font-weight: 700;
+    font-size: 12px;
+    color: #fff;
+    text-transform: uppercase;
+    min-width: 55px;
+    position: relative;
+    text-align: center;
+}
+
+.tableTitle{
+    color: #000;
+    font-size: 12px;
+    font-weight: 500;
+    text-transform: uppercase;
+    font-weight: 900;
+    top: 0px;
+    font-size: 18px;
+    position: relative;
+    padding: 0px;
+}
+
+
+thead {
+    background-color: #99ccff;
+}
+
+.date {
+    color: #000;
+    font-size: 12px;
+    font-weight: 500;
+    text-transform: uppercase;
+    font-weight: 600;
+    width: 100%;
+    left: 0;
+    font-size: 18px;
+    position: absolute;
+}
+
+
+.deleteBtn{
+font-weight: 700;
+margin-top: 5px;
+display: block;
+width: 100%;
+background: red;
+color: white;
+border: none;
+cursor: pointer;
+padding: 5px;
+font-size: 12px;
+position: absolute;
+top: 0;
+height: auto;
+left: 0;
+margin-top: 0;
+padding: 5px;
+}
+
+.studentTable{
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+    background: #fff;
+    color: #000;
+    font-size: 12px;
+    font-weight: 500;
+    text-transform: uppercase;
+    font-weight: 600;
+    text-align: left;
+    position: relative;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+    background: #fff;
+    color: #000;
+    font-size: 12px;
+    font-weight: 500;
+    text-transform: uppercase;
+    font-weight: 600;
+    text-align: left;
+    position: relative;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+    background: #fff;
+    color: #000;
+    font-size: 12px;
+    font-weight: 500;
+    text-transform: uppercase;
+    font-weight: 600;
+    text-align: left;
+    position: relative;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+    background: #fff;
+    color: #000;
+    font-size: 12px;
+    font-weight: 500;
+    text-transform: uppercase;
+    font-weight: 600;
+    text-align: left;
+    position: relative;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+    background: #fff;
+    color: #000;
+    font-size: 12px;
+    font-weight: 500;
+    text-transform: uppercase;
+    font-weight: 600;
+    text-align: left;
+    position: relative;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 0
+}
+
+.pageCounter{
+    width: 100px;
+    text-align: center;
+}
+
+.viewStatsBtn{
+    font-weight: 700;
+    margin-top: 5px;
+    display: block;
+    width: 100%;
+    background: #99ccff;
+    color: white;
+    border: none;
+    cursor: pointer;
+    padding: 5px;
+    font-size: 12px;
+    top: 0;
+    height: auto;
+    left: 0;
+    margin-top: 0;
+    padding: 5px;
+}
+
+.pagination{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.pagination>button{
+    background: #99ccff;
+    color: white;
+    border: none;
+    cursor: pointer;
+    padding: 5px;
+    font-size: 12px;
+    margin: 0 5px;
+}   
+
