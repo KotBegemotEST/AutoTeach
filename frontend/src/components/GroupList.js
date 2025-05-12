@@ -19,22 +19,22 @@ const GroupList = ({ user }) => {
     useEffect(() => {
         if (!currentUser) return;
 
-        console.log("🔄 Uuendame gruppe kasutaja jaoks:", currentUser);
+        console.log("Uuendame gruppe kasutaja jaoks:", currentUser);
 
         if (currentUser.role === "TEACHER") {
             getTeacherGroups(currentUser.id)
                 .then(data => {
-                    console.log("✅ Saadud grupid:", data);
+                    console.log("Saadud grupid:", data);
                     setGroups(data || []);
                 })
-                .catch(error => console.error("❌ API viga:", error));
+                .catch(error => console.error("API viga:", error));
         } else if (currentUser.role === "ADMIN") {
             getGroups()
                 .then(data => {
-                    console.log("✅ Kõik grupid laaditud:", data);
+                    console.log("Kõik grupid laaditud:", data);
                     setGroups(data || []);
                 })
-                .catch(error => console.error("❌ API viga:", error));
+                .catch(error => console.error("API viga:", error));
         }
     }, [currentUser]);
 
@@ -58,7 +58,7 @@ const GroupList = ({ user }) => {
             <h2>{currentUser.role === "TEACHER" ? "Minu õppeained ja rühmad" : "Kõikide rühmade nimekiri"}</h2>
             <ul className="subjectList">
                 {groups.length === 0 ? (
-                    <p>❌ Ühtegi rühma pole saadaval</p>
+                    <p>Ühtegi rühma pole saadaval</p>
                 ) : (
                     groups.map((group, index) => (
                         <li className="groupItem"
