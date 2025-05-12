@@ -14,7 +14,7 @@ const MissedLessonsChart = () => {
                 setMissedLessons(data);
             })
             .catch(error => {
-                console.error("❌ Viga puudutud tundide laadimisel:", error);
+                console.error("Viga puudutud tundide laadimisel:", error);
             });
     }, [studentId, subjectId]);
 
@@ -36,19 +36,19 @@ const MissedLessonsChart = () => {
         plugins: {
             legend: {
                 labels: {
-                    color: "#fff" // ✅ Легенда белая
+                    color: "#fff"
                 }
             }
         },
         scales: {
             x: {
                 ticks: {
-                    color: "#fff" // ✅ Ось X белая
+                    color: "#fff" 
                 }
             },
             y: {
                 ticks: {
-                    color: "#fff" // ✅ Ось Y белая
+                    color: "#fff"
                 }
             }
         }
