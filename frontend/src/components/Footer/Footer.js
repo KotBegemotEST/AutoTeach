@@ -1,5 +1,5 @@
 import React from "react";
-import "./style.css"; // Подключаем стили
+import "./style.css";
 
 const Footer = () => {
     return (
