@@ -28,7 +28,7 @@ const StatisticsPage = () => {
     const [gradeTrend, setGradeTrend] = useState([]);  
     const [attendanceTrend, setAttendanceTrend] = useState([]);  
     const [loading, setLoading] = useState(true);
-    const [displayCount, setDisplayCount] = useState(10);  // ✅ Kuvatavate andmete arv
+    const [displayCount, setDisplayCount] = useState(10);
 
     useEffect(() => {
         const fetchStatistics = async () => {
