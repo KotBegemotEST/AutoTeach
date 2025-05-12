@@ -14,8 +14,7 @@ const ActionButtons = ({ onAddLesson, lastLessonId }) => {
             alert("Tundi ei ole loodud – QR-koodi ei saa genereerida!");
             return;
         }
-    
-        // ✅ Проверка существования урока
+
         try {
             const checkResponse = await fetch(`/api/lessons/${lastLessonId}`);
             if (!checkResponse.ok) {
@@ -23,7 +22,7 @@ const ActionButtons = ({ onAddLesson, lastLessonId }) => {
                 return;
             }
         } catch (error) {
-            console.error("❌ Viga tunni kontrollimisel:", error);
+            console.error(" Viga tunni kontrollimisel:", error);
             alert("Viga tunni kontrollimisel – QR-koodi ei saa genereerida!");
             return;
         }
@@ -44,7 +43,7 @@ const ActionButtons = ({ onAddLesson, lastLessonId }) => {
                 setLastScannedUser(data[0].name);
             }
         } catch (error) {
-            console.error("❌ Viga kohaloleku laadimisel:", error);
+            console.error(" Viga kohaloleku laadimisel:", error);
         }
     };
 
@@ -94,7 +93,7 @@ const ActionButtons = ({ onAddLesson, lastLessonId }) => {
                                     </li>
                                 ))
                             ) : (
-                                <p>❌ Keegi pole veel skaneerinud</p>
+                                <p>Keegi pole veel skaneerinud</p>
                             )}
                         </ul>
                     </div>
