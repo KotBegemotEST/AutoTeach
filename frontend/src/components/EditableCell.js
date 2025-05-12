@@ -11,7 +11,7 @@ const EditableCell = ({ studentId, lessonId, initialGrade, initialStatus, initia
     useEffect(() => {
         const handleClickOutside = (event) => {
             if (containerRef.current && !containerRef.current.contains(event.target)) {
-                handleSave(); // 💾 Сохраняем при клике вне ячейки
+                handleSave(); 
             }
         };
 
