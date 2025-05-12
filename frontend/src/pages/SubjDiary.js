@@ -4,7 +4,7 @@ import StudentTable from "../components/StudentTable";
 import ActionButtons from "../components/ActionButtons";
 import AddLessonModal from "../components/AddLessonModal";
 import { getStudentGradesByGroupAndSubject } from "../api/studentApi";
-import { createLesson } from "../api/lessonApi"; // добавлен
+import { createLesson } from "../api/lessonApi";
 import '../styles/global.css';
 
 const SubjDiary = ({ user }) => {
@@ -37,7 +37,7 @@ const SubjDiary = ({ user }) => {
                 setLastLessonId(uniqueLessons[uniqueLessons.length - 1]);
             }
         } catch (error) {
-            console.error("❌ Andmete laadimisel tekkis viga:", error);
+            console.error("Andmete laadimisel tekkis viga:", error);
         }
     };
 
@@ -52,7 +52,7 @@ const SubjDiary = ({ user }) => {
 
             await createLesson(lessonData);
 
-            console.log("✅ Uus tund saadetud serverisse, kontrollime uuendusi...");
+            console.log("Uus tund saadetud serverisse, kontrollime uuendusi...");
             let retries = 10;
             let updated = false;
 
@@ -78,7 +78,7 @@ const SubjDiary = ({ user }) => {
                 alert("❗ Uus tund ei ilmunud kohe tabelisse. Proovi käsitsi uuendada.");
             }
         } catch (error) {
-            console.error("❌ Viga tunni salvestamisel:", error);
+            console.error("Viga tunni salvestamisel:", error);
         } finally {
             setLoading(false);
         }
@@ -96,7 +96,7 @@ const SubjDiary = ({ user }) => {
             />
 
             <h1>📖 Päevik grupile {groupName}, aine {subjectName}</h1>
-            {loading && <p style={{ color: "orange" }}>⏳ Ootan serveri kinnitust...</p>}
+            {loading && <p style={{ color: "orange" }}>Ootan serveri kinnitust...</p>}
 
             <AddLessonModal
                 isOpen={isModalOpen}
