@@ -24,10 +24,10 @@ const LoginForm = ({ mode, setUser }) => {
       }
 
       localStorage.setItem("user", JSON.stringify(data.user));
-      setUser(data.user); // ✅ Устанавливаем пользователя в App
+      setUser(data.user);
       navigate("/dashboard");
     } catch (err) {
-      console.error("❌ Ошибка входа:", err.message);
+      console.error("Jürdepäsu viga:", err.message);
       setError(err.message);
     }
   };
