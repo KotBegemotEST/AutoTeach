@@ -14,7 +14,7 @@ const ActionButtons = ({ onAddLesson, lastLessonId }) => {
             alert("Tundi ei ole loodud – QR-koodi ei saa genereerida!");
             return;
         }
-
+    
         try {
             const checkResponse = await fetch(`/api/lessons/${lastLessonId}`);
             if (!checkResponse.ok) {
@@ -22,7 +22,7 @@ const ActionButtons = ({ onAddLesson, lastLessonId }) => {
                 return;
             }
         } catch (error) {
-            console.error(" Viga tunni kontrollimisel:", error);
+            console.error("❌ Viga tunni kontrollimisel:", error);
             alert("Viga tunni kontrollimisel – QR-koodi ei saa genereerida!");
             return;
         }
@@ -43,7 +43,7 @@ const ActionButtons = ({ onAddLesson, lastLessonId }) => {
                 setLastScannedUser(data[0].name);
             }
         } catch (error) {
-            console.error(" Viga kohaloleku laadimisel:", error);
+            console.error("❌ Viga kohaloleku laadimisel:", error);
         }
     };
 
@@ -64,8 +64,8 @@ const ActionButtons = ({ onAddLesson, lastLessonId }) => {
 
     return (
         <div className="buttons-block">
-            <button onClick={onAddLesson}>➕ Lisa tund</button>
-            <button onClick={handleGenerateQR} style={{ marginLeft: "10px" }}>
+            <button className="hov" onClick={onAddLesson}>➕ Lisa tund</button>
+            <button className="hov" onClick={handleGenerateQR} style={{ marginLeft: "10px" }}>
                 📄 Genereeri QR-kood
             </button>
 
@@ -84,7 +84,7 @@ const ActionButtons = ({ onAddLesson, lastLessonId }) => {
                         <QRCodeCanvas value={qrCodeUrl} size={256} />
                         <p>{qrCodeUrl}</p>
 
-                        <h4>📌 Kes on skaneerinud:</h4>
+                        <h4>Kes on skaneerinud:</h4>
                         <ul>
                             {attendanceList.length > 0 ? (
                                 attendanceList.map((student, index) => (
@@ -93,7 +93,7 @@ const ActionButtons = ({ onAddLesson, lastLessonId }) => {
                                     </li>
                                 ))
                             ) : (
-                                <p>Keegi pole veel skaneerinud</p>
+                                <p> Keegi pole veel skaneerinud</p>
                             )}
                         </ul>
                     </div>

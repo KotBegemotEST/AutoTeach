@@ -3,6 +3,7 @@ import { useNavigate } from "react-router-dom";
 import GroupList from "../components/GroupList";
 import QRScanner from "../components/QRscanner";
 import '../styles/dashboard.css';
+import '../styles/global.css';
 
 const Dashboard = () => {
     const [user, setUser] = useState(null);
@@ -45,8 +46,10 @@ const Dashboard = () => {
                             border: "none",
                             borderRadius: "5px",
                         }}
+                        className="hov"
                     >
                         📷 Skaneeri QR-kood
+                        
                     </button>
 
                     <QRScanner

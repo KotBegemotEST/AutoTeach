@@ -2,7 +2,7 @@ import axios from "axios";
 
 export const getStudentsByGroup = async (groupId) => {
     const response = await axios.get(`http://localhost:5000/api/students?groupId=${groupId}`);
-    console.log("📌 Полученные студенты:", response.data);
+    console.log("📌 Saadud õpilased:", response.data);
 
     return response.data;
 };
@@ -15,34 +15,32 @@ export const getStudentGrades = async (studentId) => {
 export const getStudentGradesByGroupAndSubject = async (groupId, subjectId) => {
     try {
         const response = await axios.get(`http://localhost:5000/api/students/${groupId}/grades/${subjectId}`);
-        console.log("✅ Оценки загружены:", response.data);
+        console.log("✅ Hinded on laetud:", response.data);
 
         return response.data;
     } catch (error) {
-        console.error("Ошибка при получении оценок:", error);
+        console.error("Viga hinnete toomisel:", error);
         return null;
     }
 };
 
-
 export const updateStudentGrade = async (updatedData) => {
-    console.log("📤 Отправляем обновленные данные:", updatedData); // Добавили
+    console.log("📤 Saadame uuendatud andmed:", updatedData); // Lisatud
 
     try {
         const response = await axios.post("http://localhost:5000/api/grades/update", updatedData, {
             headers: { "Content-Type": "application/json" }
         });
-        console.log("✅ Данные успешно обновлены!");
+        console.log("✅ Andmed on edukalt uuendatud!");
         return response.data;
     } catch (error) {
-        console.error("❌ Ошибка при обновлении данных:", error.response?.data || error);
+        console.error("❌ Viga andmete uuendamisel:", error.response?.data || error);
         throw error;
     }
 };
 
-
 export const markAttendance = async ({ studentId, lessonId, grade }) => {
-    console.log("📡 Отправляем данные на сервер:", { studentId, lessonId, grade });
+    console.log("📡 Saadame andmed serverisse:", { studentId, lessonId, grade });
 
     const payload = {
         studentId,
@@ -50,21 +48,19 @@ export const markAttendance = async ({ studentId, lessonId, grade }) => {
         status: "PRESENT"
     };
 
-    // ❗ Добавляем grade только если он явно передан
     if (grade !== undefined) {
         payload.grade = grade;
     }
 
     try {
         const response = await axios.post("http://localhost:5000/api/attendance/mark", payload);
-        console.log("✅ Сервер ответил:", response.data);
+        console.log("✅ Server vastas:", response.data);
         return response.data;
     } catch (error) {
-        console.error("❌ Ошибка при отметке посещаемости:", error);
+        console.error("❌ Viga kohaloleku märkimisel:", error);
         throw error;
     }
 };
-
 
 export const getLessonAttendanceAndGrades = async (lessonId) => {
     try {

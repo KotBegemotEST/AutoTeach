@@ -64,7 +64,7 @@ const QRScanner = ({ studentId, isOpen, onClose }) => {
             }
 
             await markAttendance({ studentId, lessonId });
-            setScanStatus("✅ Kohalolek edukalt märgitud!");
+            setScanStatus("Kohalolek edukalt märgitud!");
             setScanResult(lessonUrl);
             setScannedLessons(prev => new Set(prev).add(lessonId));
 
@@ -113,7 +113,7 @@ const QRScanner = ({ studentId, isOpen, onClose }) => {
     return (
         <div className="modal-overlay" onClick={handleOverlayClick}>
             <div className="modal-content" onClick={(e) => e.stopPropagation()} style={{ position: "relative" }}>
-                <button
+                <button 
                     onClick={closeScanner}
                     style={{
                         position: "absolute",
@@ -125,6 +125,7 @@ const QRScanner = ({ studentId, isOpen, onClose }) => {
                         cursor: "pointer"
                     }}
                     aria-label="Sulge"
+                    className="hov"
                 >
                     ❌
                 </button>
@@ -145,7 +146,8 @@ const QRScanner = ({ studentId, isOpen, onClose }) => {
                 {scanResult && <p>🔍 Skaneeritud: {scanResult}</p>}
 
                 {scanResult && (
-                    <button
+                    <button 
+                        className="hov"
                         onClick={handleRestart}
                         style={{
                             marginTop: "10px",

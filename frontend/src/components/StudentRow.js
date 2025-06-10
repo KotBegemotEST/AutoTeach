@@ -46,7 +46,7 @@ const StudentRow = ({ student, dates, subjectId, allGrades, onViewStats, onUpdat
                 );
             })}
             <td>
-                <button onClick={() => onViewStats(student.id)} className="viewStatsBtn">
+                <button onClick={() => onViewStats(student.id)}  className="hov viewStatsBtn">
                     📊 Vaata statistikat
                 </button>
             </td>

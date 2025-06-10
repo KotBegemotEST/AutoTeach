@@ -24,10 +24,10 @@ const LoginForm = ({ mode, setUser }) => {
       }
 
       localStorage.setItem("user", JSON.stringify(data.user));
-      setUser(data.user);
+      setUser(data.user); 
       navigate("/dashboard");
     } catch (err) {
-      console.error("Jürdepäsu viga:", err.message);
+      console.error("❌ Sisselogimisviga:", err.message);
       setError(err.message);
     }
   };
@@ -56,7 +56,7 @@ const LoginForm = ({ mode, setUser }) => {
           </div>
         </div>
         {error && <p style={{ color: "red" }}>{error}</p>}
-        <button className="login-button  button--primary full-width" type="submit">
+        <button className="hov login-button  button--primary full-width" type="submit">
           <span>{mode === "login" ? "Log In" : "Sign Up"}</span>
         </button>
       </div>

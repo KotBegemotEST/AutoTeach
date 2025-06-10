@@ -55,7 +55,7 @@ const AddLessonModal = ({
             }));
             setStudents(initializedStudents);
         } catch (error) {
-            console.error("Viga õpilaste laadimisel:", error);
+            console.error("❌ Viga õpilaste laadimisel:", error);
             setStudents([]);
         }
     };
@@ -81,7 +81,7 @@ const AddLessonModal = ({
                 setStudents(studentsProcessed);
             }
         } catch (error) {
-            console.error("Viga hinnete kaudu andmete laadimisel:", error);
+            console.error("❌ Viga hinnete kaudu andmete laadimisel:", error);
         }
     };
 
@@ -159,9 +159,9 @@ const AddLessonModal = ({
                                 <div key={student.student_id} className="student-row">
                                     <span>{student.student_name}</span>
                                     <select value={student.attendance} onChange={e => updateStudentData(student.student_id, "attendance", e.target.value)}>
-                                        <option value="PRESENT">Kohal</option>
-                                        <option value="LATE">Hilines</option>
-                                        <option value="ABSENT">Puudus</option>
+                                        <option value="PRESENT">✅ Kohal</option>
+                                        <option value="LATE">⏳ Hilines</option>
+                                        <option value="ABSENT">🚫 Puudus</option>
                                     </select>
                                     <input
                                         type="number"
@@ -177,10 +177,10 @@ const AddLessonModal = ({
                     )}
 
                     <div className="buttons-block">
-                        <button onClick={handleSave} disabled={isSaving}>
+                        <button  className="hov" onClick={handleSave} disabled={isSaving}>
                             {isSaving ? "Salvestan..." : "Salvesta"}
                         </button>
-                        <button onClick={onClose}>Tühista</button>
+                        <button className="hov" onClick={onClose}>Tühista</button>
                     </div>
                 </div>
             </div>

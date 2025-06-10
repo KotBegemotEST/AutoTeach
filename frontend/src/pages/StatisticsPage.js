@@ -28,7 +28,7 @@ const StatisticsPage = () => {
     const [gradeTrend, setGradeTrend] = useState([]);  
     const [attendanceTrend, setAttendanceTrend] = useState([]);  
     const [loading, setLoading] = useState(true);
-    const [displayCount, setDisplayCount] = useState(10);
+    const [displayCount, setDisplayCount] = useState(10);  // ✅ Kuvatavate andmete arv
 
     useEffect(() => {
         const fetchStatistics = async () => {
@@ -116,7 +116,7 @@ const StatisticsPage = () => {
             </div>
 
 
-            <button className="styleBtn" onClick={() => window.history.back()} style={{ marginTop: "10px" }}>
+            <button className="styleBtn hov" onClick={() => window.history.back()} style={{ marginTop: "10px" }}>
                 Tagasi
             </button>
         </div>

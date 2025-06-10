@@ -14,16 +14,27 @@
     color: white;
 }
 
+.groupH2{
+    margin: 0 auto;
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+
 .subjectList{
     padding-left: 0px;
+    width: 300px;
+    margin: 0 auto;
+    border-bottom: 1px solid #ffffff;
+    padding-bottom: 15px;
+    padding-top: 15px;
+    border-top: 1px solid #f7f7f7;
 }
 
 .groupItem{
     text-decoration: none !important;
     color: white !important;
     text-decoration: none !important;
-
-
     list-style-type: none;
     text-decoration: none;
 }
@@ -40,7 +51,6 @@
 }
 .dashboard-container h1{
     color: white;
-    font-size: 24px;
-    margin-bottom: 20px; 
-    text-align: center;
+    font-size: 16px;
+    margin-bottom: 20px;
 }
